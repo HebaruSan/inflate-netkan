@@ -1,0 +1,24 @@
+name: NetKAN Inflator
+description: Submits a Netkan to the queue for inflation
+author:
+    - HebaruSan
+inputs:
+
+    identifier:
+        description: The Netkan identifier to inflate
+        required: true
+
+    log level:
+        description: >
+            How verbose to be:
+            debug    - Print everything, including low level stuff
+            info     - Print basic progress messages (default)
+            warn     - Only print when there might be a problem
+            error    - Only print when there's definitely a problem
+            critical - Only print when it's game over, man
+        required: false
+        default: info
+
+runs:
+    using: docker
+    image: Dockerfile
