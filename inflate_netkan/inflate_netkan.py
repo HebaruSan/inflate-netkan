@@ -9,8 +9,8 @@ from netkan.common import netkans, sqs_batch_entries
 
 
 def inflate_netkan() -> None:
-    messages = (nk.sqs_message(CkanMetaRepo(Repo('/CKAN-meta')).highest_version(nk.identifier))
-                for nk in netkans('.', [environ['INPUT_IDENTIFIER']]))
+    messages = (nk.sqs_message(CkanMetaRepo(Repo('CKAN-meta')).highest_version(nk.identifier))
+                for nk in netkans('NetKAN', [environ['INPUT_IDENTIFIER']]))
     for batch in sqs_batch_entries(messages):
         logging.info(f'Queueing inflation request batch: {batch}')
         boto3.client('sqs').send_message_batch(

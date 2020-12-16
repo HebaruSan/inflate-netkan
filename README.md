@@ -22,11 +22,13 @@ jobs:
         steps:
             - name: Get NetKAN repo
               uses: actions/checkout@v2
+              with:
+                  path: NetKAN
             - name: Get CKAN-meta repo
               uses: actions/checkout@v2
               with:
                   repository: KSP-CKAN/CKAN-meta
-                  path: /CKAN-meta
+                  path: CKAN-meta
             - name: Manual inflate
               uses: HebaruSan/inflate-netkan@master
               env:
