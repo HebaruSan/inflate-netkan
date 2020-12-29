@@ -14,7 +14,7 @@ def inflate_netkan() -> None:
     for batch in sqs_batch_entries(messages):
         logging.info(f'Queueing inflation request batch: {batch}')
         boto3.client('sqs').send_message_batch(
-            QueueUrl=boto3.resource('sqs').get_queue_by_name(QueueName='NetKANInbound').url,
+            QueueUrl=boto3.resource('sqs').get_queue_by_name(QueueName='Inbound.fifo').url,
             Entries=batch
         )
     exit(ExitStatus.success)
