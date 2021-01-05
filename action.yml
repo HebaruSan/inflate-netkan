@@ -9,7 +9,7 @@ inputs:
         required: true
 
     log level:
-        description: >
+        description: |-
             How verbose to be:
             debug    - Print everything, including low level stuff
             info     - Print basic progress messages (default)
