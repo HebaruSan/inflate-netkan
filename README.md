@@ -37,4 +37,5 @@ jobs:
                   AWS_DEFAULT_REGION:    ${{ secrets.AWS_DEFAULT_REGION    }}
               with:
                   identifier: ${{ github.event.inputs.identifier }}
+                  game id: ksp2
 ```

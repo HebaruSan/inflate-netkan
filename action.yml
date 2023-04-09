@@ -8,6 +8,11 @@ inputs:
         description: The Netkan identifier to inflate
         required: true
 
+    game id:
+        description: The id of the game to use (ksp or ksp2)
+        required: false
+        default: ksp
+
     log level:
         description: |-
             How verbose to be:
