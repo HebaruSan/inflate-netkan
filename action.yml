@@ -1,7 +1,6 @@
 name: NetKAN Inflator
 description: Submits a Netkan to the queue for inflation
-author:
-    - HebaruSan
+author: HebaruSan
 inputs:
 
     identifier:
