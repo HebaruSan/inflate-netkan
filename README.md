@@ -1,3 +1,9 @@
+**NOTE**: This Action is now deprecated and was replaced by:
+
+- KSP-CKAN/NetKAN-Infra#355
+- KSP-CKAN/NetKAN#10608
+- KSP-CKAN/KSP2-NetKAN#205
+
 # inflate-netkan
 
 GitHub Action to submit a Netkan to the queue for inflation.
